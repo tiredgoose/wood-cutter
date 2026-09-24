@@ -1,0 +1,19 @@
+{
+  "name": "wood-cutter",
+  "version": "0.8.0",
+  "private": true,
+  "type": "module",
+  "description": "Isometric idle incremental game about chopping wood",
+  "scripts": {
+    "dev": "vite --open",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "node tests/e2e/smoke.mjs",
+    "icons": "node scripts/gen-icons.mjs",
+    "check": "for f in src/*.js sw.js scripts/*.mjs tests/e2e/*.mjs; do node --check \"$f\" || exit 1; done"
+  },
+  "devDependencies": {
+    "playwright": "^1.56.1",
+    "vitest": "^3.2.4"
+  }
+}
